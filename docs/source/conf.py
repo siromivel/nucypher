@@ -208,10 +208,10 @@ def remove_module_docstring(app, what, name, obj, options, lines):
 todo_include_todos = False
 
 def setup(app):
-    local_source_root = 'https://docs.nucypher.com/en/platest/'
+    local_source_root = 'https://docs.nucypher.com/en/'
 
     app.add_config_value('recommonmark_config', {
-            'url_resolver': lambda url: local_source_root + url,
+            'url_resolver': lambda url: local_source_root + 'latest/' + url,
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
