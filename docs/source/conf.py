@@ -211,7 +211,7 @@ def setup(app):
     local_source_root = 'https://docs.nucypher.com/en/latest/'
 
     app.add_config_value('recommonmark_config', {
-            'url_resolver': lambda url: local_source_root + '/elmo/' + url,
+            'url_resolver': lambda url: local_source_root + '' + url,
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
